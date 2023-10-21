@@ -4,8 +4,8 @@ module.exports = {
 	language: "en",
 	description: "I am writing about my experiences as a naval navel-gazer.",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "Ashley Jackson",
+		email: "a.j94@live.co.uk",
+		url: "https://github.com/Zogurd/eleventy-base-blog.git"
 	}
 }
