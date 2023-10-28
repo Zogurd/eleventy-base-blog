@@ -4,29 +4,42 @@ eleventyNavigation:
   key: Form
   order: 5
 ---
-<h1>Form</h1>
+
+<h1>Contact<span style="color: cyan">Me</span></h1>
+<br>
 <form name="contact" method="POST" data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" id="name" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" id="email" name="email" /></label>
-  </p>
-  <p>
-    <label
-      >Your Role:
-      <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label
-    >
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button class="form_submit" type="submit">Send</button>
-  </p>
+  <fieldset class="border p-4">
+    <legend class="h4 d-flex justify-content-center">Contact<span style="color: cyan">Form</span>:</legend>
+    <br><br>
+    <div class="form-floating text-dark">
+      <input type="text" class="form-control" id="floatingFirstName firstName" name="firstName" length="50" maxLength="80" placeholder="John">
+      <label for="floatingFirstName">First name:</label>
+    </div>
+    <br>
+    <div class="form-floating text-dark">
+      <input type="text" class="form-control" id="floatingLastName lastName" name="lastName" length="50" maxLength="80" placeholder="Doe">
+      <label for="floatingLastName">Last name:</label>
+    </div>
+    <br>
+    <div class="form-floating text-dark">
+      <input type="email" class="form-control" id="floatingInput email" name="email" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <br>
+    <div class="form-floating text-dark">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="message" style="height: 100px"></textarea>
+      <label for="floatingTextarea2">Message:</label>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+      <input type="checkbox" id="terms" placeholder="terms and conditions" required>
+      <lable for="terms"><a href="#" class="p-2">Terms and Conditions</a></label>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-info form_submit" type="submit">Send</button>
+    </div>
+  </fieldset>
 </form>
 <script>
   //get default border colours (to use on input when validation passes)
