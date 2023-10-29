@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: Projcets
+  key: Projects
   order: 4
 ---
-# Projects
+<h1><span style="color: cyan">My</span>Projects</h1>
 
 I like to put my projects here.
 
