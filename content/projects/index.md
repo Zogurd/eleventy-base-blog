@@ -8,4 +8,4 @@ eleventyNavigation:
 
 I like to put my projects here.
 
-{% image "./ashLogo.png", "Ashley's Logo" %}
+<!-- {% image "./ashLogo.png", "Ashley's Logo" %} -->
