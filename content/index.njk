@@ -3,26 +3,29 @@ layout: layouts/home.njk
 eleventyNavigation:
   key: Home
   order: 1
-numberOfLatestPostsToShow: 3
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1><span style="color: cyan">My</span>Latest ({{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}):</h1>
+<div class="home">
+  <div class="home-content">
+      <h3>Hello, It's</h3>
+      <h1>Ashley Jackson</h1>
+      <h3>And I'm a <span id="element"></span></h3>
+      <p>I'm a web Designer in the making.<br>My goal is to create and design websites , Front-end development , and hopefully become a full-stack developer....</p><br>
+      <div class="home-sci">
+          <a href="https://linkedin.com/in/ashley-jackson-874542258" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="https://github.com/Zogurd" target="_blank"><i class='bx bxl-github'></i></a>
+          <a href="https://instagram.com/halsey.94?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class='bx bxl-instagram' ></i></a>
+          <a href="JavaScript:void(0);" onclick="alert('This has been disabled.')" target=""><i class='bx bxl-whatsapp' ></i></a>
+      </div>
+          <a href="./Ashley_Jackson_CV.pdf" download="./Ashley_Jackson_CV.pdf" class="btn-box" style="color:#03000D">Download CV</a>
+  </div>
+</div>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">my archive</a>.</p>
-{% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+<script>
+	var typed = new Typed('#element', {
+		strings: ['Front-end Developer' , 'Web Developer'],
+		typeSpeed: 50,
+		backSpeed: 50,
+		backDelay: 1000,
+		loop:true
+  	});
+</script>

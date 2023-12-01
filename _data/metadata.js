@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Portfolio",
+	title: "Portfolio.",
 	url: "https://example.com/",
 	language: "en",
 	description: "This is a site about me and my journey as a Web-Developer.",
