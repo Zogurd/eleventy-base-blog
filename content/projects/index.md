@@ -4,6 +4,10 @@ eleventyNavigation:
   key: Projects
   order: 4
 ---
-<h1><span style="color: cyan">My</span>Projects</h1>
-
-I like to put my projects here.
+<div id="projects" class="projects">
+    <div class="projects-content">
+        <h2><span>My</span>Projects</h2>
+        <br>
+        <p class="descrip">COMING SOON...</p>
+    </div>
+</div>

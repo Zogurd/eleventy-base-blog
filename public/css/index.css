@@ -164,7 +164,7 @@ header {
 	background-color: #09161C;
 	padding: 10px;
     transition: .3s;
-	box-shadow: 0 0 5px cyan, 0 0 25px cyan,  0 0 50px cyan, 0 0 100px cyan, 0 0 150px cyan;
+	box-shadow: 0 0 5px cyan, 0 0 25px cyan,  0 0 60px cyan;
 	text-decoration: none;
 }
 .nav a[href][aria-current="page"] {
@@ -183,15 +183,15 @@ header {
     width: 100%;
     justify-content: space-between;
     height: 86vh;
-    background-image: url(Background.1.jpg);
+    background-image: url(/img/ash-BG.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: 650px;
+    background-position: right;
     display: flex;
     align-items: center;
 }
 .home-content {
-    max-width: 600px;
+    max-width: 700px;
 }
 .home-content h3 {
     font-size: 32px;
@@ -263,6 +263,221 @@ header {
 .btn-box:hover {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan,  0 0 50px cyan, 0 0 100px cyan, 0 0 150px cyan;
 }
+
+/* About */
+.about {
+    position: relative;
+    width: 100%;
+	display: flex;
+    justify-content: space-between; 
+}
+.about-content h4 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: slideBottom .8s ease forwards;
+    animation-delay: .05s;
+}
+.about-content h2 span {
+    color: cyan;
+}
+.about-content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight .9s ease forwards;
+    animation-delay: .05s;
+}
+.about-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
+}
+.about-content ul li {
+	font-size: 18px;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
+}
+.skills {
+    position: relative;
+    width: 100%;
+    margin: 2em 0 4em 0;
+}
+.skills-content {
+    max-width: 1600px;
+}
+.accordion {
+    width: 100%;
+}
+.accordion-button {
+    font-size: 27px;
+    font-weight: 700;
+    color: snow;
+    background-color:#09161C;
+    border-color: cyan;
+}
+.accordion-button:focus {
+    color: #09161C;
+    background: cyan;
+}
+.accordion-button span {
+    color: cyan;
+}
+.accordion-button:focus span {
+    color: #E8008D;
+}
+.accordion-item {
+    color: snow;
+    background:#09161C;
+}
+.skills-content h6, .skills-content p, .skills-content ul {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
+}
+
+/* Projects */
+.projects {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+/* .projects-content h5 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 0;
+    opacity: 0;
+    animation: slideBottom .8s ease forwards;
+    animation-delay: .05s;
+}
+.projects-content h5:nth-of-type(2) {
+    margin-bottom: 25px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+} */
+.projects-content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight .9s ease forwards;
+    animation-delay: .05s;
+}
+.projects-content h2 span {
+    color: cyan;
+}
+.projects-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
+}
+
+/* Contact */
+.contact {
+    position: relative;
+    width: 100%;
+}
+.contact h2 span {
+    color: cyan;
+}
+.contact h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight .9s ease forwards;
+    animation-delay: .05s;
+}
+.contact-content {
+    max-width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.contact-content p {
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 0.8s ease forwards;
+    animation-delay: .05s;
+}
+div.card {
+	background-color: #09161C;
+	color: snow;
+	border-color: snow;
+	opacity: 0;
+	transition: .5s ease;
+    animation: slideLeft .8s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+div.card h5 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+.contact-sci a[href] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid cyan;
+    border-radius: 25px;
+    font-size: 20px;
+    color: cyan;
+    text-decoration: none;
+    
+}
+.contact-sci a[href]:hover {
+	border-color: cyan;
+    background-color: cyan;
+    color: #03000D;
+    box-shadow: 0 0 20px cyan;
+}
+.form {
+	margin: 2em 0 6em 0;
+	transition: .5s ease;
+    animation: slideLeft .8s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.form button {
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid cyan;
+    border-radius: 25px;
+    font-size: 20px;
+    color: cyan;
+    text-decoration: none;
+}
+.form button:hover {
+	border-color: cyan;
+    background-color: cyan;
+    color: #03000D;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* Footer */
+/* footer {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 4vh;
+    padding: 10px 30px 10px 0;
+    background-color:#09161C;
+} */
 
 /* Posts list */
 .postlist {
