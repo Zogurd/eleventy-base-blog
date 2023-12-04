@@ -1,17 +1,64 @@
 ---
-title: This is my second post with a much longer title.
-description: This is a post on My Blog about leveraging agile frameworks.
-date: 2018-07-04
+title: Function & Control Flow
+description: This post is about funtion and controle flow completed via The Coders Guild.
+date: 2023-11-07
 tags:
-  - number 2
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+<div class="container">
+    <h4 class="d-flex justify-content-center">Task 1</h4>
+    <p class="d-flex justify-content-center">Write a function that outputs a sentence. Then invoke that function later in your code.</p>
+    <br>
+    <h4 class="d-flex justify-content-center">Task 2</h4>
+    <p class="d-flex justify-content-center">Write a simple program to combine a first name and a last name inside a function. Then update the function to accept a first and last name as arguments.</p>
+    <br>
+    <h4 class="d-flex justify-content-center">Task 3</h4>
+    <p class="d-flex justify-content-center">Add a return statement to your 'name' function. Use that function to set the value of a variable.</p>
+    <br>
+    <h4 class="d-flex justify-content-center">Task 4</h4>
+    <p class="d-flex justify-content-center">a) Make a variable called "temperature". Write some code that tells you to put on a coat if it is below 50 degrees</p>
+    <p class="d-flex justify-content-center">b) Extend the Program to show the following:</p>
+        <ul class="d-grid justify-content-center">
+            <li>If it's less than 50 degrees, wear a coat.</li>
+            <li>If it's less than 30 degrees, wear a coat and a hat.</li>
+            <li>If it's less than 0 degrees, stay inside.</li>
+            <li>Otherwise, just pants and vest is fine.</li>
+        </ul>
+    <p class="d-flex justify-content-center">c) Add a logical operator to your ‘Shall I wear a coat?’ program</p>
+    <br>
+    <p class="h6 d-flex justify-content-center">(Below is my solution to the tasks.)</p>
+</div>
 
-## Section Header
+```js
+// task 1
+function doSomething() {
+	console.log("I'm doing something...");
+};
 
-<a href="/blog/firstpost/">First post</a>
-<a href="/blog/thirdpost/">Third post</a>
+doSomething();
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+// task 2 & 3
+function fullName(firstName, lastName) {
+	return `${firstName} ${lastName}`;
+};
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+let myName = fullName("Ash", "Jackson");
+console.log(myName);
+
+// task 4
+let temperature = prompt("Enter the temperature...");
+temperature = Number(temperature);
+
+if (temperature <= 50 && temperature >= 30) {
+    alert("WEAR YOUR COAT!!!");
+    console.log("WEAR YOUR COAT!!!");
+} else if (temperature < 30 && temperature > 0) {
+    alert("WEAR YOUR COAT AND HAT!!!");
+    console.log("WEAR YOUR COAT AND HAT!!!");
+} else if (temperature <= 0) {
+    alert("STAY INSIDE!!!");
+    console.log("STAY INSIDE!!!");
+} else {
+    alert(`It's ${temperature}, just pants and vest is fine.`);
+    console.log(`It's ${temperature}, just pants and vest is fine.`);
+};
+```
