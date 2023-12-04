@@ -73,12 +73,15 @@ main {
 	padding-left: 10%;
 	padding-right: 10%;
 }
+@media only screen and (max-width: 1000px) {
+    main {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
 main :first-child {
 	margin-top: 0;
 }
-/* header {
-	border-bottom: 1px dashed var(--color-gray-20);
-} */
 header:after {
 	content: "";
 	display: table;
@@ -86,8 +89,9 @@ header:after {
 }
 .links-nextprev {
 	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
+	border-top: 3px solid #E8008D;
 	padding: 1em 0;
+    margin-top: 30px;
 }
 table {
 	margin: 1em 0;
@@ -133,7 +137,7 @@ header {
 .home-link {
 	font-size: 2em; /* 16px /16 */
 	font-weight: 700;
-	padding-left: 8%;
+	padding-left: 1em;
 	margin-right: 0;
 	text-decoration: none;
 }
@@ -144,6 +148,7 @@ header {
 /* Nav */
 .nav {
 	display: flex;
+    justify-content: space-between;
 	padding: 5px;
 	margin: 5px;
 	list-style: none;
@@ -152,7 +157,7 @@ header {
 }
 .nav-item {
 	display: inline-block;
-	margin-left: 2em;
+	margin-left: 1.5em;
 }
 .nav-item a[href] {
 	text-decoration: none;
@@ -176,6 +181,13 @@ header {
     transition: .3s;
 	text-decoration: none;
 }
+@media only screen and (max-width: 900px) {
+    .nav {
+        padding: 2px;
+        margin: 2px;
+        font-size: 0.8em;
+    }
+}
 
 /* Home */
 .home {
@@ -189,6 +201,11 @@ header {
     background-position: right;
     display: flex;
     align-items: center;
+}
+@media only screen and (max-width: 900px) {
+    .home {
+        background-image: none;
+    }
 }
 .home-content {
     max-width: 700px;
@@ -479,7 +496,40 @@ div.card h5 {
     background-color:#09161C;
 } */
 
-/* Posts list */
+/* Blog */
+.blog {
+    position: relative;
+    width: 100%;
+	display: block;
+    justify-content: space-between; 
+}
+.blog-content h2 span {
+    color: cyan;
+}
+.blog-content h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight .9s ease forwards;
+    animation-delay: .05s;
+}
+.blog-content p {
+    margin-top: 5px;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
+}
+.post {
+    position: relative;
+    width: 100%;
+	display: flex;
+    justify-content: center; 
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #E8008D;
+}
 .postlist {
 	list-style: none;
 	padding: 0;
@@ -491,6 +541,9 @@ div.card h5 {
 	align-items: baseline;
 	counter-increment: start-from -1;
 	margin-bottom: 1em;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .05s;
 }
 .postlist-item:before {
 	display: inline-block;
@@ -541,10 +594,10 @@ div.card h5 {
 	gap: .5em;
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0 0 1em 0;
 }
 .post-metadata time {
-	margin-right: 1em;
+	margin-right: 1.5em;
 }
 
 /* Direct Links / Markdown Headers */

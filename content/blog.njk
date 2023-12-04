@@ -4,7 +4,13 @@ eleventyNavigation:
   key: Blog
   order: 2
 ---
-<h1><span style="color: cyan">My</span>Blog</h1>
+<div class="blog">
+    <div class="blog-content">
+        <h2><span>My</span>Blog</h2>
+        <p>(latest at top)
+            {% set postslist = collections.posts %}
+            {% include "postslist.njk" %}
+        </p>
+    </div>
+</div>
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
